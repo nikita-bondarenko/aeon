@@ -1,0 +1,41 @@
+$iconBackground: #FEFBF0;
+$grayField: #F7F8FC;
+$lightDateNumber: #A9A9B8;
+$grayText:#6D6E85;
+$grayNumber: #8B8C9E;
+$darkText: #262842;
+$blue: #E2EBFF;
+$blueBorderColor: #497CF6;
+$yellow: #FFF2E0;
+$yellowBorderColor: #FFA530;
+$green: #CFF0D6;
+$greenBorderColor: #2DB77B;
+$border: 1px solid rgba(38, 40, 66, 0.12);
+$borderRadius: 10px;
+$borderRadiusSmall: 4px;
+$cellWidth: 22px;
+$planWidth: 390px;
+
+@mixin bigText {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@mixin mediumText {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin commonText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin smallText {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}

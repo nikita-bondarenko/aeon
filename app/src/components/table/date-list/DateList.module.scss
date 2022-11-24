@@ -1,0 +1,69 @@
+@import "/src/styles/variables";
+
+.period {
+  display: flex;
+  align-items: stretch;
+height: 100%;
+}
+
+$height:24px;
+
+.week {
+  display: flex;
+  flex-direction: column;
+  border-left: $border;
+
+  &__top {
+    background: $grayField;
+    display: flex;
+    flex-direction: column;
+    border-bottom: $border;
+
+  }
+
+  &__period {
+    @include smallText;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: $border;
+  }
+
+  &__dates {
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  .day {
+    height: $height;
+    width: $cellWidth;
+    @include smallText;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .day:not(:last-child) {
+    border-right: $border;
+  }
+
+  .weekend {
+    color: $lightDateNumber;
+  }
+}
+
+.chart {
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  &__column {
+
+    width: $cellWidth;
+    height: 100%;
+  }
+
+  &__column:not(:last-child) {
+    border-right: $border;
+  }
+}

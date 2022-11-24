@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/font.css"/>
+    <link rel="stylesheet" href="/css/iconsfont.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <section class="hero">
+        <div class="container">
+
+            <div class="hero__content">
+                <div class="hero__logo logo">
+                    <span class="logo__item left">Fin</span>
+                    <span class="logo__item right">Kit</span>
+                </div>
+                <p class="hero__description">
+                    Гибкая мобильная платформа для быстрой реализации инвестиционных
+                    сервисов.
+                </p>
+                <button class="hero__button button">Заказать демо</button>
+            </div>
+            <ul class="hero__benefits benefits">
+                <li class="benefits__item">
+                    <p class="benefits__text">Удобный пользовательский интерфейс</p>
+                    <div class="benefits__icon icon icon-graph"></div>
+                </li>
+                <li class="benefits__item">
+                    <p class="benefits__text">
+                        Панель администратора для ведения учета
+                    </p>
+                    <div class="benefits__icon icon icon-act"></div>
+                </li>
+                <li class="benefits__item">
+                    <p class="benefits__text">Простая и&nbsp;быстрая интеграция</p>
+                    <div class="benefits__icon icon icon-filter"></div>
+                </li>
+                <li class="benefits__item">
+                    <p class="benefits__text">Гибкая масштабируемая система</p>
+                    <div class="benefits__icon icon icon-setting"></div>
+                </li>
+            </ul>
+            <picture class="hero__picture">
+                <source
+                        class="hero__image"
+                        media="(max-width: 700px)"
+                        srcset="/img/phone-mobile1x.png 1x, /img/phone-mobile2x.png 2x"
+                />
+                <img
+                        class="hero__image"
+                        src="/img/phone-desktop1x.png"
+                        srcset="/img/phone-desktop2x.png 2x"
+                        alt="Изображение телефона"
+                />
+            </picture>
+            <ul class="hero__lang lang">
+                <li class="lang__item">
+                    <label class="lang__label lang__selected" for="ru-lang">
+                        <input checked name="lang" id="ru-lang" type="radio" class="lang__input"/>
+                        <span>Ru</span>
+                    </label>
+                </li>
+                <li class="lang__item">
+                    <label class="lang__label" for="en-lang">
+                        <input name="lang" id="en-lang" type="radio" class="lang__input"/>
+                        <span>En</span>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <div class="container">
+        <section class="cases">
+            <h2 class="cases__title title">
+                Наши <span class="title__color">ключевые продукты</span> для
+                инвестиций
+            </h2>
+            <ul class="cases__body">
+                <li class="case">
+                    <div class="case__content">
+                        <h3 class="case__title">Платформа для автоследования</h3>
+                        <p class="case__text">Копирование стратегий в&nbsp;автономном режиме</p>
+                    </div>
+                    <picture class="case__picture">
+                        <source
+                                class="case__image"
+                                media="(max-width: 700px)"
+                                srcset="
+                    /img/case-first-mobile1x.png 1x,
+                    /img/case-first-mobile2x.png 2x
+                  "
+                        />
+                        <img
+                                class="case__image"
+                                src="/img/case-first-desktop1x.png"
+                                srcset="/img/case-first-desktop2x.png 2x"
+                                alt="Изображение телефона"
+                        />
+                    </picture>
+                </li>
+                <li class="case">
+                    <div class="case__content">
+                        <h3 class="case__title">Платформа для робо-эдвайзинга</h3>
+                        <p class="case__text">Персонализированный подбор стратегий исходя из заданных параметров</p>
+                    </div>
+                    <picture class="case__picture">
+                        <source
+                                class="case__image"
+                                media="(max-width: 700px)"
+                                srcset="
+                    /img/case-second-mobile1x.png 1x,
+                    /img/case-second-mobile2x.png 2x
+                  "
+                        />
+                        <img
+                                class="case__image"
+                                src="/img/case-second-desktop1x.png"
+                                srcset="/img/case-second-desktop2x.png 2x"
+                                alt="Изображение телефона"
+                        />
+                    </picture>
+                </li>
+            </ul>
+        </section>
+        <section class="valuebility">
+            <div class="valuebility__body">
+                <h2 class="valuebility__title title">
+                    <span class="title__color">Представляем ценность</span>
+                    для&nbsp;брокера и банка
+                </h2>
+                <p class="valuebility__text">
+                    Мы помогаем брокерам и банкам запустить собственное мобильное
+                    приложение для инвестиций в короткие сроки с экономией бюджета
+                </p>
+                <button class="valuebility__button button">Заказать демо</button>
+            </div>
+            <ul class="valuebility__list">
+                <li class="valuebility__item">
+                    <div class="valuebility__icon icon icon-money"></div>
+                    <p class="valuebility__description">
+                        Экономим время и деньги на запуск digital сервисов
+                    </p>
+                </li>
+                <li class="valuebility__item">
+                    <div class="valuebility__icon icon icon-person"></div>
+                    <p class="valuebility__description">
+                        Создаем канал привлечения новых клиентов
+                    </p>
+                </li>
+                <li class="valuebility__item">
+                    <div class="valuebility__icon icon icon-circle"></div>
+                    <p class="valuebility__description">
+                        Помогаем увеличить выручку путем запуска нового продукта
+                    </p>
+                </li>
+                <li class="valuebility__item">
+                    <div class="valuebility__icon icon icon-heart"></div>
+                    <p class="valuebility__description">
+                        Повышаем лояльность действующих клиентов
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,565 @@
+:root {
+    --dark: #29374E;
+    --blue: #0962E8;
+    --light: #CBECFF;
+    --cloud: #E9F6FF;
+    --icon: #EFF9FF;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--dark);
+    font-family: "Euclid Circular A";
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 140%;
+    transition: background .3s ease-in-out;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0px 60px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero {
+    background: var(--light);
+    margin-bottom: 150px;
+}
+
+.hero__lang {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+}
+
+.lang {
+    display: flex;
+    gap: 15px;
+
+}
+
+.lang__label {
+
+}
+
+.lang__input {
+    display: none;
+}
+.lang__input + span {
+    cursor: pointer;
+    padding: 5px 6px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 26px;
+    height: 26px;
+}
+
+.lang__input + span:hover {
+    background: var(--cloud);
+}
+
+
+.lang__input:checked + span {
+    color: var(--blue);
+    background: var(--white);
+}
+
+.hero__picture {
+    pointer-events: none;
+    position: absolute;
+    width: 66%;
+    top: 16px;
+    right: -128px;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+.hero .container {
+    padding-top: 120px;
+    min-height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__logo {
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.logo__item {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.logo__item.right {
+    background: var(--white);
+    color: var(--blue);
+    padding-right: 16px;
+}
+
+.hero__description {
+    font-size: 22px;
+    line-height: 130%;
+    max-width: 350px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.button {
+    cursor: pointer;
+    color: var(--white);
+    background: var(--blue);
+    border-radius: 8px;
+    width: 200px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.button:hover {
+    background: var(--dark);
+}
+
+.hero__benefits {
+    margin-bottom: -35px;
+}
+
+.benefits {
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+}
+
+.benefits__item {
+    width: 230px;
+    position: relative;
+    padding: 22px 62px 22px 20px;
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.benefits__text {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.icon {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: var(--icon);
+    border-radius: 100%;
+}
+
+.icon::before {
+    position: absolute;
+}
+
+.benefits__icon {
+    top: 15px;
+    right: 15px;
+}
+
+.benefits__icon::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.benefits__icon.icon-graph::before {
+    transform: translate(-40%, -57%);
+}
+
+.title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 130%;
+}
+
+.title__color {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 130%;
+    color: var(--blue);
+}
+
+.cases {
+    margin-bottom: 80px;
+}
+
+.cases__title {
+    margin: 0px auto 50px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.cases__body {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.case {
+    position: relative;
+    padding: 35px 265px 40px 20px;
+    min-height: 330px;
+    background: var(--cloud);
+    border-radius: 30px;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+.case__title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.case__picture {
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    bottom: -8px;
+}
+
+.case__image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.case:nth-child(2n) .case__picture {
+    right: 5px;
+}
+
+.valuebility {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.valuebility__body {
+    max-width: 480px;
+    margin-bottom: 60px;
+}
+
+.valuebility__title {
+    margin-bottom: 20px;
+}
+
+.valuebility__text {
+    max-width: 405px;
+    font-weight: 300;
+    margin-bottom: 37px;
+}
+
+.valuebility__list {
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.valuebility__item {
+    position: relative;
+    padding: 60px 9px 20px 20px;
+    width: 230px;
+    min-height: 140px;
+}
+
+.valuebility__icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.valuebility__icon::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -53%);
+    font-size: 36px;
+}
+
+
+.valuebility__description {
+    font-weight: 400;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .hero .container {
+        padding-top: 456px;
+        overflow: hidden;
+    }
+
+    .hero__lang {
+        top: 26px;
+        right: 16px;
+    }
+
+    .hero__picture {
+        width: 144%;
+        max-width: 534px;
+        top: 16px;
+        right: -150px;
+    }
+
+    .hero__image {
+        height: 100%;
+    }
+
+    .logo__item {
+        font-size: 48px;
+        padding: 6px 12px;
+        border-radius: 12px;
+    }
+
+    .logo__item.right {
+        padding-right: 18px;
+    }
+
+    .logo {
+        margin-left: -14px;
+    }
+
+    .hero__description {
+        max-width: none;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero__content {
+        margin-bottom: 37px;
+        width: 343px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .benefits {
+        margin-bottom: 33px;
+        gap: 20px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benefits__item {
+        width: 164px;
+        min-height: 118px;
+        padding: 42px 12px 10px 18px;
+    }
+
+    .benefits__text {
+        font-size: 14px;
+    }
+
+    .benefits__icon {
+        top: -5px;
+        left: 18px;
+        right: auto;
+    }
+
+    .hero {
+        margin-bottom: 40px;
+    }
+    .title, .title__color {
+        font-size: 24px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .cases__title {
+        margin-bottom: 26px;
+    }
+
+    .cases__body {
+        gap: 16px;
+    }
+
+    .case {
+        padding: 25px  170px  25px 16px ;
+        max-width: 343px;
+        min-height: 215px;
+        margin-bottom: 0px;
+    }
+    .case__title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .case__text {
+        font-size: 13px;
+    }
+
+    .case__picture {
+        top: 15px;
+        right: 5px;
+        bottom: -7px;
+    }
+
+    .cases {
+        margin-bottom: 40px;
+    }
+
+    .valuebility__title {
+        margin-bottom: 5px;
+    }
+
+    .valuebility__text {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .valuebility {
+        gap: 37px;
+    }
+
+    .valuebility__body {
+        margin-bottom: 0px;
+        max-width: 343px;
+    }
+
+    .valuebility__list {
+        gap: 20px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .valuebility__item {
+        box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+
+        width: 164px;
+        min-height: 118px;
+        padding: 42px 12px 10px 18px;
+    }
+
+    .valuebility__icon {
+        top: -5px;
+        left: 18px;
+    }
+
+    .valuebility__icon::before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-43%, -45%);
+        font-size: 27px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

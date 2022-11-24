@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:  'Roboto';
+  color: $darkText;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: $darkText;
+}
+

@@ -1,0 +1,32 @@
+@import "/src/styles/variables";
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.title {
+  @include bigText;
+}
+
+
+
+.button {
+  position: relative;
+  @include mediumText;
+  border: $border;
+  border-radius: $borderRadius;
+  padding: 11px 16px 11px 44px;
+}
+
+.button::before {
+  position: absolute;
+  left: 13px;
+  top: 7px;
+  font-size: 25px;
+}
