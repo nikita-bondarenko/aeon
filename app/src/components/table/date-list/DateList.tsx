@@ -1,9 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useAppSelector} from "../../../hooks/redux";
 import {Stylized} from "../../../types";
 import styles from './DateList.module.scss';
+import {InView} from "react-intersection-observer";
+import {useActions} from "../../../hooks/actions";
+import PeriodsDisplay from "./periods-display/PeriodsDisplay";
 
 const DateList = ({className}: Stylized) => {
+
+    const {setStateProp} = useActions()
 
     const {sortedDates} = useAppSelector(state => state.chart)
     const monthsShort = [
@@ -13,6 +18,10 @@ const DateList = ({className}: Stylized) => {
 
     return (
         <ul className={[styles.period,className].join(' ')}>
+            <PeriodsDisplay></PeriodsDisplay>
+            <li className={[styles.view].join(' ')}>
+                <InView className={styles.view__left} onChange={(value: boolean) => setStateProp({propName: 'isLeftChartBorder', value})}></InView>
+            </li>
             {sortedDates && Object.entries(sortedDates).map(([weekNumber, days]) => {
                     const monday = days[0]
                     const mondayMonthShort = monthsShort[monday.month()]
@@ -38,6 +47,9 @@ const DateList = ({className}: Stylized) => {
                     )
                 }
             )}
+            <li className={[styles.view].join(' ')}>
+                <InView className={styles.view__right} onChange={(value: boolean) => setStateProp({propName: 'isRightChartBorder', value})}></InView>
+            </li>
         </ul>
     );
 };

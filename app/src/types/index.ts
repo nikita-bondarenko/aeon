@@ -21,7 +21,10 @@ export type ServerData = {
     chart: Chart | null;
 }
 
-export type ChartState = ServerData & Dates & { sortedDates: SortedDates | null }
+export type ChartState =
+    ServerData
+    & Dates
+    & { sortedDates: SortedDates | null, isLeftChartBorder: boolean, isRightChartBorder: boolean, plans: Plan[] }
 
 export type Chart = {
     id: number;
@@ -45,4 +48,11 @@ export type SubSub = {
     period_start: Date;
     period_end: Date;
     sub?: SubSub[];
+}
+
+export type Plan = SubSub & {
+    parents: number[]
+    nestingLevel: number,
+    childQuantity: number,
+    isOpen: boolean,
 }

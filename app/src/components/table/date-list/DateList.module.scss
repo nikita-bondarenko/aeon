@@ -3,15 +3,44 @@
 .period {
   display: flex;
   align-items: stretch;
-height: 100%;
+  height: 100%;
+  position: relative;
 }
 
-$height:24px;
+
+.view {
+  position: relative;
+
+  @mixin view {
+    position: absolute;
+    width: 1px;
+    background: transparent;
+    top: 0px;
+    bottom: 0px;
+  }
+
+  &__left {
+    @include view;
+    left: 0px;
+  }
+
+  &__right {
+    @include view;
+    right: 0px;
+  }
+}
+
+$height: 24px;
 
 .week {
   display: flex;
   flex-direction: column;
-  border-left: $border;
+  height: 100%;
+
+  &:not(:nth-child(2)) {
+    border-left: $border;
+
+  }
 
   &__top {
     background: $grayField;
@@ -44,6 +73,7 @@ $height:24px;
     justify-content: center;
     align-items: center;
   }
+
   .day:not(:last-child) {
     border-right: $border;
   }
@@ -57,6 +87,7 @@ $height:24px;
   flex-grow: 1;
   display: flex;
   align-items: stretch;
+
   &__column {
 
     width: $cellWidth;

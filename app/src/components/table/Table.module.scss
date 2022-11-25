@@ -3,31 +3,26 @@
 .table {
   width: 100%;
   height: auto;
-  box-shadow: inset -56px 0px 28px -44px rgba(black, .5);
-  position: relative;
   min-height: 710px;
   overflow: hidden;
   border: $border;
   border-bottom-left-radius: $borderRadius;
   border-top-left-radius: $borderRadius;
   display: flex;
-  position: relative;
+  margin-bottom: 50px;
+position: relative;
 
   &__wrapper {
-    position: absolute;
-    top: 0px;
-    left: $planWidth;
-    bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    display: block;
+    border-bottom-right-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    height: 100%;
   }
 
   .title {
     padding: 15px 20px;
     min-height: 48px;
     background: $grayField;
-    width: $planWidth;
     border-bottom: $border;
 
     &__text {
@@ -39,13 +34,58 @@
   }
 
   &__left {
+    flex-grow: 1;
+    width: $planWidth;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    border-right: $border;
   }
 
   &__right {
-    overflow: hidden;
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .fade {
+
+      @mixin fade {
+        position: absolute;
+        width: 20px;
+        top: 0;
+        height: 100%;
+        transition: opacity 1s ease-in-out;
+        animation: appear .3s ease-in-out;
+      }
+
+      &__left {
+        @include fade;
+        left: $planWidth;
+        background: linear-gradient(to left, transparent, rgba(black, .3));
+      }
+
+      &__right {
+        @include fade;
+        right: 0;
+        background: linear-gradient(to right, transparent, rgba(black, .3));
+
+      }
+    }
   }
+
+  &__right:hover {
+    overflow-x: scroll;
+
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
 }
 

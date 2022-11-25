@@ -18,7 +18,6 @@ export const chartApi = createApi({
             async onQueryStarted(prop, {dispatch, queryFulfilled}) {
                 try {
                     const { data } = await queryFulfilled;
-                    console.log(data)
                     dispatch(fillState(data))
                 } catch (err) {
                     console.log(err)

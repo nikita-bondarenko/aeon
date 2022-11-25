@@ -1,0 +1,17 @@
+@import "/src/styles/variables";
+
+
+.item {
+  height: 41px;
+  width: 100%;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  border-radius: $borderRadiusSmall;
+  border: $border;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+}

@@ -1,0 +1,63 @@
+@import '/src/styles/variables.scss';
+
+
+.item {
+  border-bottom: $border;
+  padding: 11px 20px;
+  background: transparent;
+  width: $planWidth;
+}
+
+.item__hover {
+  cursor: pointer;
+  &:hover {
+    background: $grayField;
+  }
+}
+@import "/src/styles/variables";
+
+
+.content {
+  display: flex;
+  align-items: center;
+
+}
+
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  border-radius: $borderRadiusSmall;
+  position: relative;
+  margin-right: 4px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -47%);
+  }
+}
+
+.arrow {
+  width: 16px;
+  height: 13px;
+  margin-right: 6px;
+}
+
+.arrow__up {
+  transform: rotate(180deg) translate(2px, -1px);
+}
+
+.number {
+  @include smallText;
+  font-weight: 100;
+  font-style: italic;
+  color: $grayNumber;
+  margin-right: 8px;
+}

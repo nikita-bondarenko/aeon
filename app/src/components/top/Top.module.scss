@@ -22,6 +22,11 @@
   border: $border;
   border-radius: $borderRadius;
   padding: 11px 16px 11px 44px;
+  cursor:pointer;
+
+  &:hover {
+    background: $grayField;
+  }
 }
 
 .button::before {

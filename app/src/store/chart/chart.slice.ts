@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {ChartState, Dates, ServerData, SortedDates} from "../../types";
+import {ChartState, Dates, Plan, ServerData, SortedDates} from "../../types";
 import {Dayjs} from "dayjs";
 
 const initialState: ChartState = {
@@ -7,7 +7,10 @@ const initialState: ChartState = {
     period: '',
     chart: null,
     dates: [],
-    sortedDates: null
+    sortedDates: null,
+    isLeftChartBorder: false,
+    isRightChartBorder: false,
+    plans: []
 }
 
 const chartSlice = createSlice({
@@ -23,6 +26,16 @@ const chartSlice = createSlice({
          },
         setSortedDates(state, {payload}: PayloadAction<SortedDates>) {
             state.sortedDates = payload
+        },
+        setStateProp(state, {payload}: PayloadAction<{propName:'isLeftChartBorder' | 'isRightChartBorder' | "plans", value: boolean | Plan[]}>) {
+            // @ts-ignore
+            state[payload.propName] = payload.value
+        },
+        setPlanIsOpen(state, {payload} : PayloadAction<{id: number, value: boolean}>) {
+            const plan = state.plans.find(item => item.id === payload.id )
+            if (plan) {
+                plan.isOpen = payload.value
+            }
         }
     }
 })

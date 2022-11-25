@@ -26,8 +26,6 @@ export const useDates = () => {
 
         let dates = [] as Dayjs[]
 
-
-
         function getDates(start: Dayjs, current: Dayjs, end: Dayjs): Dayjs[] {
 
             if (current.valueOf() < start.valueOf()) {

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Table.module.scss'
 import DateList from "./date-list/DateList";
 import PlanList from "./plan-list/PlanList";
+import {useAppSelector} from "../../hooks/redux";
 
 const Table = () => {
+
+    const { isLeftChartBorder, isRightChartBorder, dates} = useAppSelector(state => state.chart)
 
     return (
         <div className={styles.table}>
@@ -14,9 +17,11 @@ const Table = () => {
                 <PlanList></PlanList>
             </div>
             <div className={styles.table__right}>
-                <div className={styles.table__wrapper}>
+                <div style={{width: dates.length * 22.1}} className={styles.table__wrapper}>
                     <DateList className={styles.header__dates}></DateList>
                 </div>
+                {!isLeftChartBorder && <div className={[styles.fade__left].join(' ')}></div>}
+                {!isRightChartBorder && <div className={[styles.fade__right].join(' ')}></div>}
             </div>
 
         </div>
